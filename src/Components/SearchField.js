@@ -1,0 +1,26 @@
+import React from "react";
+import { TextField } from "@mui/material";
+
+function SearchField(props) {
+  const { search, setSearch } = props;
+  return (
+    <TextField
+      id="filled-basic"
+      label="Search Customer Order Id"
+      variant="filled"
+      fullWidth
+      style={{
+        backgroundColor: "white",
+        borderRadius: "6px",
+        marginRight: "10px",
+        marginBottom: "10px",
+        margiTop: "2px"
+      }}
+      value={search}
+      type="text"
+      onChange={(e) => setSearch(e.target.value)}
+    />
+  );
+}
+
+export default SearchField;
